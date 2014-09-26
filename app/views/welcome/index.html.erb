@@ -1,39 +1,56 @@
-<h1>Welcome to the Home Page!</h1>
+<h1>Welcome to the community of Swappaholics!</h1>
 
-<% @users.each do |u| %>
-	<ul>
-		<h4>User First Name</h4>
-		<li><%= u.first_name %></li>
-		<h4>Last Name</h4>
-		<li><%= u.last_name %></li>
-		<h4>Email</h4>
-		<li><%= u.email %></li>
-		<h4>Rating</h4>
-		<li><%= u.rating %></li>
-	</ul>
-<% end %>
+<!-- JUMBOTRON -->
+<div class="container">
+	<div class="jumbotron">
+	  <h1>HOW IT WORKS</h1>
+	  <p>The 4T's</p>
+	  	<ul>
+	  		<li>Post TRASH</li>
+	  		<li>Find TREASURE</li>
+	  		<li>Barter TRADE</li>
+	  		<li>Enjoy TRIUMPH</li>
+	  	</ul>
+	  <p><a class="btn btn-primary btn-lg">Sign up</a></p>
+	</div>
+</div>
+
+<div class="container">
+	<% @users.each do |u| %>
+		<ul>
+			<h4>User First Name</h4>
+			<li><%= u.first_name %></li>
+			<h4>Last Name</h4>
+			<li><%= u.last_name %></li>
+			<h4>Email</h4>
+			<li><%= u.email %></li>
+			<h4>Rating</h4>
+			<li><%= u.rating %></li>
+		</ul>
+	<% end %>
 
 
-<% @items.each do |i| %>
-	<ul>
-		<h4>Item Name</h4>
-		<li><%= i.name %></li>
-		<h4>Description</h4>
-		<li><%= i.description %></li>
-		<h4>Condition</h4>
-		<li><%= i.condition %></li>
-		<h4>Estimated Value</h4>
-		<li><%= i.est_value %></li>
-		<h4>Willing to Trade For</h4>
-		<li><%= i.willing_to_trade_for %></li>
-	</ul>
-<% end %>
+	<% @items.each do |i| %>
+		<ul>
+			<h4>Item Name</h4>
+			<li><%= i.name %></li>
+			<h4>Description</h4>
+			<li><%= i.description %></li>
+			<h4>Condition</h4>
+			<li><%= i.condition %></li>
+			<h4>Estimated Value</h4>
+			<li><%= i.est_value %></li>
+			<h4>Willing to Trade For</h4>
+			<li><%= i.willing_to_trade_for %></li>
+		</ul>
+	<% end %>
 
-<a href="#" class="btn btn-primary">Primary</a>
-<a href="#" class="btn btn-success">Success</a>
-<a href="#" class="btn btn-info">Info</a>
-<a href="#" class="btn btn-warning">Warning</a>
-<a href="#" class="btn btn-danger">Danger</a>
+	<a href="#" class="btn btn-primary">Primary</a>
+	<a href="#" class="btn btn-success">Success</a>
+	<a href="#" class="btn btn-info">Info</a>
+	<a href="#" class="btn btn-warning">Warning</a>
+	<a href="#" class="btn btn-danger">Danger</a>
+</div>
 
 Words words words. Kevin likes it in the backend.
 
