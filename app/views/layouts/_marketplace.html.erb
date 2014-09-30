@@ -15,7 +15,7 @@
 						<li><%= i.est_value %></li>
 						<h4 class="label label-info" id="item_label">WILLING TO TRADE FOR</h4>
 						<li><%= i.willing_to_trade_for %></li>
-						<span><%= link_to "See More >>", item_path(:id) %></span>
+						<span><%= link_to "See More >>", item_path(i.id) %></span>
 					</ul>
 				</div>
 			<% end %>

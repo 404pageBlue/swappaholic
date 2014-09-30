@@ -13,7 +13,8 @@ users = User.create([
 		last_name: "Kadowaki",
 		email: "brett.kadowaki@gmail.com",
 		password: "hello",
-		rating: 9
+		rating: 9,
+		location: "Out of this World"
 	},
 	{
 		first_name: "Justin",
@@ -22,6 +23,14 @@ users = User.create([
 		password: "awesome",
 		rating: 8.99999999,
 		location: 'Santa Monica'
+	},	
+	{
+		first_name: "Kevin",
+		last_name: "Backend",
+		email: "kevin@backend.com",
+		password: "blueboobies",
+		rating: 10,
+		location: "Los Angeles"
 	},
 
 ]);
