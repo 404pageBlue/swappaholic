@@ -14,7 +14,16 @@ users = User.create([
 		email: "brett.kadowaki@gmail.com",
 		password: "hello",
 		rating: 9
-	}
+	},
+	{
+		first_name: "Justin",
+		last_name: "Jitti",
+		email: "Justin@gmail.com",
+		password: "awesome",
+		rating: 8.99999999,
+		location: 'Santa Monica'
+	},
+
 ]);
 
 Item.destroy_all
