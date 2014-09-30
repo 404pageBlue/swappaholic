@@ -1,28 +1,26 @@
 <h1>See Individual Item!</h1>
 
-<!-- 	<ul>
-		
-			<%#= form_for @item do |i| %>
-				<li><%#= i.label :name %>
-				<%#= @item.name %><br>
-				<li><%#= i.label :description %>
-				<%#= @item.description %><br>
-				<li><%#= i.label :condition %>
-				<%#= @item.condition %><br>
-				<li><%#= i.label :est_value %>
-				<%#= @item.est_value %><br>
-				<li><%#= i.label :willing_to_trade_for %>
-				<%#= @item.willing_to_trade_for %><br>
-			<#% end %>
+<div>
+<!-- BOOTSTRAP GRID SYSTEM -->
+	<div id="marketplace_grid">
+		<div class="row">
+				<div class="col-md-4">
+					<ul id="item_marketplace">
+						<h4 class="label label-info" id="item_label">NAME</h4>
+						<li><%= @item.name %></li>
+						<h4 class="label label-info" id="item_label">DESCRIPTION</h4>
+						<li><%= @item.description %></li>
+						<h4 class="label label-info" id="item_label">CONDITION</h4>
+						<li><%= @item.condition %></li>
+						<h4 class="label label-info" id="item_label">ESTIMATED VALUE</h4>
+						<li><%= @item.est_value %></li>
+						<h4 class="label label-info" id="item_label">WILLING TO TRADE FOR</h4>
+						<li><%= @item.willing_to_trade_for %></li>
+						<span><%= link_to "Back to Marketplace >>", items_path %></span>
+					</ul>
+				</div>
+		</div>
+	</div>
 
-	</ul> -->
 
-<%#= date_select('event', 'date') %><br><br>
-
-<!-- <h1>GA End :(</h1> -->
-<%#= distance_of_time_in_words(Time.now, 'October 31st, 2014') %><br>
-
-
-<br>
-<%#= highlight('The quick brown fox', ['The']) %>
-<!-- <p>The quick brown fox</p> -->
+</div>
