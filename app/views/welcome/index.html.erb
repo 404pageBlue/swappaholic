@@ -29,21 +29,11 @@
 		</ul>
 	<% end %>
 
+<!-- MARKETPLACE -->
+	<div class="container">
+	<%= render partial: 'layouts/marketplace' %>
 
-	<% @items.each do |i| %>
-		<ul>
-			<h4>Item Name</h4>
-			<li><%= i.name %></li>
-			<h4>Description</h4>
-			<li><%= i.description %></li>
-			<h4>Condition</h4>
-			<li><%= i.condition %></li>
-			<h4>Estimated Value</h4>
-			<li><%= i.est_value %></li>
-			<h4>Willing to Trade For</h4>
-			<li><%= i.willing_to_trade_for %></li>
-		</ul>
-	<% end %>
+	</div>
 
 	<a href="#" class="btn btn-primary">Primary</a>
 	<a href="#" class="btn btn-success">Success</a>

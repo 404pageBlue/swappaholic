@@ -1,0 +1,26 @@
+<div>
+	<!-- BOOTSTRAP GRID SYSTEM -->
+	<div id="marketplace_grid">
+		<div class="row">
+			<% @items.each do |i| %>
+				<div class="col-md-4">
+					<ul id="item_marketplace">
+						<h4 class="label label-info" id="item_label">NAME</h4>
+						<li><%= i.name %></li>
+						<h4 class="label label-info" id="item_label">DESCRIPTION</h4>
+						<li><%= i.description %></li>
+						<h4 class="label label-info" id="item_label">CONDITION</h4>
+						<li><%= i.condition %></li>
+						<h4 class="label label-info" id="item_label">ESTIMATED VALUE</h4>
+						<li><%= i.est_value %></li>
+						<h4 class="label label-info" id="item_label">WILLING TO TRADE FOR</h4>
+						<li><%= i.willing_to_trade_for %></li>
+						<span><%= link_to "See More >>", item_path(:id) %></span>
+					</ul>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+
+</div>

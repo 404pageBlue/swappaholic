@@ -16,3 +16,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "welcome";
+
+// NAV BAR STYLING
+.navbar {
+	// padding-bottom: 2px;
+}
+.navbar-right {
+	padding-right: 15px;
+}
+
+// MAIN BODY STYLING
+body {
+	padding-top: 30px;
+}
+
+// _MARKETPLACE STYLING
+#item_marketplace
+{
+	list-style-type: none;
+	margin: 12px;
+}
+#item_marketplace #item_label {
+	font-size: 11px;
+	padding: 2px;
+}
