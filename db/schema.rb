@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002004734) do
+ActiveRecord::Schema.define(version: 20141002184625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20141002004734) do
     t.string   "condition"
     t.float    "est_value"
     t.string   "willing_to_trade_for"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rtests", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
