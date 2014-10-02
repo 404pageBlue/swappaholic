@@ -6,34 +6,28 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.destroy_all
-users = User.create([
-	{
-		first_name: "Brett",
-		last_name: "Kadowaki",
-		email: "brett.kadowaki@gmail.com",
-		password: "hello",
-		rating: 9,
-		location: "Out of this World"
-	},
-	{
-		first_name: "Justin",
-		last_name: "Jitti",
-		email: "Justin@gmail.com",
-		password: "awesome",
-		rating: 8.99999999,
-		location: 'Santa Monica'
-	},	
-	{
-		first_name: "Kevin",
-		last_name: "Backend",
-		email: "kevin@backend.com",
-		password: "blueboobies",
-		rating: 10,
-		location: "Los Angeles"
-	},
+# User.destroy_all
+# users = User.create([
+# 	{
+# 		first_name: "Brett",
+# 		last_name: "Kadowaki",
+# 		rating: 9,
+# 		location: "Out of this World"
+# 	},
+# 	{
+# 		first_name: "Justin",
+# 		last_name: "Jitti",
+# 		rating: 8.99999999,
+# 		location: 'Santa Monica'
+# 	},	
+# 	{
+# 		first_name: "Kevin",
+# 		last_name: "Backend",
+# 		rating: 10,
+# 		location: "Los Angeles"
+# 	},
 
-]);
+# ]);
 
 Item.destroy_all
 items = Item.create([
