@@ -18,6 +18,7 @@
 						<li><%#= @user.rating %></li>
 						<h4 class="label label-info" id="item_label">Location</h4>
 						<li><%#= @user.location %></li> -->
+						<span><%= link_to "Edit Profile >>", user_path(@user) %></span><br>		
 						<span><%= link_to "Find Treasure >>", items_path %></span>
 					</ul>
 				</div>

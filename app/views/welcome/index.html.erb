@@ -11,9 +11,15 @@
 	  		<li>Barter TRADE</li>
 	  		<li>Enjoy TRIUMPH</li>
 	  	</ul>
-	  <p><a class="btn btn-primary btn-lg">Sign up</a></p>
+	  <button class="btn btn-primary btn-lg"><%= link_to "Sign Up", new_user_registration_path %></button>
 	</div>
 </div>
+
+	<a href="#" class="btn btn-primary">Primary</a>
+	<a href="#" class="btn btn-success">Success</a>
+	<a href="#" class="btn btn-info">Info</a>
+	<a href="#" class="btn btn-warning">Warning</a>
+	<a href="#" class="btn btn-danger">Danger</a>
 
 <div class="container">
 	<% @users.each do |u| %>
@@ -21,7 +27,9 @@
 			<h4>First Name</h4>
 			<li><%= u.firstname %></li>
 			<h4>Last Name</h4>
-			<li><%= u.lastname %></li>
+			<li><%= u.lastname %></li>			
+			<h4>Email</h4>
+			<li><%= u.email %></li>
 		<!-- 	<h4>Email</h4> -->
 		<!-- 	<li><#%= u.email %></li> -->
 <!-- 			<h4>Rating</h4> -->
@@ -34,14 +42,4 @@
 	<%= render partial: 'layouts/marketplace' %>
 
 	</div>
-
-	<a href="#" class="btn btn-primary">Primary</a>
-	<a href="#" class="btn btn-success">Success</a>
-	<a href="#" class="btn btn-info">Info</a>
-	<a href="#" class="btn btn-warning">Warning</a>
-	<a href="#" class="btn btn-danger">Danger</a>
 </div>
-
-Words words words. Kevin likes it in the backend.
-
-More words. Kevin still likes it in the backend.

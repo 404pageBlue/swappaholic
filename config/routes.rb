@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   root 'welcome#index'
 
-  get '/users/:id', to: 'users#show', as: :user_profile
+  get '/users/:id', to: 'users#show', as: :user_profile  
+  get '/users/:id/edit_profile', to: 'users#edit', as: :edit_profile, :as => :user
+  put '/users/:id/edit_profile', to: 'users#update' 
+  patch '/users/:id/edit_profile', to: 'users#update'
+
 
   resources :items
 
