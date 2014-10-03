@@ -1,0 +1,24 @@
+<div class="container" id="edit_profile">
+
+<%= form_for @user do |f| %>
+	<div class="edit_box">
+		<h4 class="label label-info" id="item_label">First Name</h4>
+     <%= f.text_field :firstname %><br>     
+	</div>
+	<div class="edit_box">
+		<h4 class="label label-info" id="item_label">Last Name</h4>
+		<span id="lastname_box">
+     <%= f.text_field :lastname %><br>
+   	</span>
+	</div>
+	<div class="edit_box">
+		<h4 class="label label-info" id="item_label">Email</h4>
+		<span id="email_box">
+     <%= f.text_field :email %><br>
+   	</span>
+	</div>
+     <%= f.submit "Update Profile!" %>
+<% end %>
+
+</div>
+

@@ -21,8 +21,18 @@
 .navbar {
 	// padding-bottom: 2px;
 }
+#welcome_tag {
+	padding-top: 11.5px;
+	padding-bottom: 9.5px;	
+	margin-right: 4px;
+}
 .navbar-right {
 	padding-right: 15px;
+}
+
+// JUMBOTRON
+.jumbotron button a {
+	color: white;
 }
 
 // MAIN BODY STYLING
@@ -39,4 +49,18 @@ body {
 #item_marketplace #item_label {
 	font-size: 11px;
 	padding: 2px;
+}
+
+// EDIT PROFILE PAGE
+#edit_profile {
+	margin-top: 30px;
+}
+#edit_profile div {
+	margin: 4px;
+}
+#email_box {
+	margin-left: 25px;
+}
+#lastname_box {
+	margin-left: 2px;
 }

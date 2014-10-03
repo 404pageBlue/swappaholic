@@ -9,22 +9,19 @@
 # User.destroy_all
 # users = User.create([
 # 	{
-# 		first_name: "Brett",
-# 		last_name: "Kadowaki",
-# 		rating: 9,
-# 		location: "Out of this World"
+# 		firstname: "Brett",
+# 		lastname: "Kadowaki",
+# 		email: "brett.kadowaki@gmail.com"
 # 	},
 # 	{
-# 		first_name: "Justin",
-# 		last_name: "Jitti",
-# 		rating: 8.99999999,
-# 		location: 'Santa Monica'
+# 		firstname: "Justin",
+# 		lastname: "Jitti",
+# 		email: "justin@gmail.com"
 # 	},	
 # 	{
-# 		first_name: "Kevin",
-# 		last_name: "Backend",
-# 		rating: 10,
-# 		location: "Los Angeles"
+# 		firstname: "Kevin",
+# 		lastname: "Backend",
+# 		email: "kevin@gmail.com"
 # 	},
 
 # ]);
