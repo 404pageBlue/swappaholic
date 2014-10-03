@@ -22,24 +22,28 @@
 	<a href="#" class="btn btn-danger">Danger</a>
 
 <div class="container">
-	<% @users.each do |u| %>
-		<ul>
-			<h4>First Name</h4>
-			<li><%= u.firstname %></li>
-			<h4>Last Name</h4>
-			<li><%= u.lastname %></li>			
-			<h4>Email</h4>
-			<li><%= u.email %></li>
-		<!-- 	<h4>Email</h4> -->
-		<!-- 	<li><#%= u.email %></li> -->
-<!-- 			<h4>Rating</h4> -->
-			<!-- <li> --><%#= u.rating %><!-- </li> -->
-		</ul>
-	<% end %>
+	<div id="row">
+		<div class="col-md-4">
+			<% @users.each do |u| %>
+				<ul>
+					<h4>First Name</h4>
+					<li><%= u.firstname %></li>
+					<h4>Last Name</h4>
+					<li><%= u.lastname %></li>			
+					<h4>Email</h4>
+					<li><%= u.email %></li>
+					<!-- 	<h4>Email</h4> -->
+					<!-- 	<li><#%= u.email %></li> -->
+					<!-- 			<h4>Rating</h4> -->
+					<!-- <li> --><%#= u.rating %><!-- </li> -->
+				</ul>
+			<% end %>
+		</div>
+	</div>
+</div>
 
 <!-- MARKETPLACE -->
 	<div class="container">
 	<%= render partial: 'layouts/marketplace' %>
 
 	</div>
-</div>
