@@ -33,55 +33,64 @@ items = Item.create([
 		description: "Desk that does desky things",
 		condition: "descent",
 		est_value: 20,
-		willing_to_trade_for: "electronics"
+		willing_to_trade_for: "electronics",
+		user_id: 1
 	},
 	{
 		name: "iPad",
 		description: "Pad of i",
 		condition: "like new",
 		est_value: 200,
-		willing_to_trade_for: "furniture"
+		willing_to_trade_for: "furniture",
+		user_id: 1
 	},
 	{
 		name: "Brandon",
 		description: "Worthless financial analyst",
 		condition: "old and beat up",
 		est_value: 2,
-		willing_to_trade_for: "food"
+		willing_to_trade_for: "food",
+		user_id: 2
 	},	
 	{
 		name: "Basketball hoop",
 		description: "Hoop for basketball",
 		condition: "brand new",
 		est_value: 150,
-		willing_to_trade_for: "tv's"
+		willing_to_trade_for: "tv's",
+		user_id: 2
 	},	
 	{
 		name: "Ray Ban sunglasses",
 		description: "Polarized sunglasses",
 		condition: "like new",
 		est_value: 180,
-		willing_to_trade_for: "High heels"
+		willing_to_trade_for: "High heels",
+		user_id: 3
 	},	
 	{
 		name: "Lazy Boy",
 		description: "Single seater lazy boy sofa chair",
 		condition: "heavily used",
 		est_value: 75,
-		willing_to_trade_for: "Game consoles"
+		willing_to_trade_for: "Game consoles",
+		user_id: 3
 	},	
 	{
 		name: "Evander Hollyfield's ear",
 		description: "cartilidge",
 		condition: "old",
 		est_value: 75000,
-		willing_to_trade_for: "Mike Tyson poster"
+		willing_to_trade_for: "Mike Tyson 
+		poster",
+		user_id: 2	
 	},	
 	{
 		name: "Long Board",
 		description: "8.5 ft Becker long board",
 		condition: "used",
 		est_value: 500,
-		willing_to_trade_for: "Jewelry"
+		willing_to_trade_for: "Jewelry",
+		user_id: 3		
 	}
 ]);
