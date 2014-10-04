@@ -8,13 +8,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-<<<<<<< HEAD
     @item = Item.new
-  end
-
-end
-=======
-  	@item = Item.new
   end
 
   def create
@@ -29,5 +23,3 @@ end
 
 
 
-
->>>>>>> a51034bfee19c8de7926f0c0d85e84e689f3dcf7
