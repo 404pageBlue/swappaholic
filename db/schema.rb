@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002184625) do
+ActiveRecord::Schema.define(version: 20141004000111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,10 @@ ActiveRecord::Schema.define(version: 20141002184625) do
     t.string   "willing_to_trade_for"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
 
   create_table "rtests", force: true do |t|
     t.datetime "created_at"
