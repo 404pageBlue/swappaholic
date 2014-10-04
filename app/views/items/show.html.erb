@@ -16,6 +16,11 @@
 						<li><%= @item.est_value %></li>
 						<h4 class="label label-info" id="item_label">WILLING TO TRADE FOR</h4>
 						<li><%= @item.willing_to_trade_for %></li>
+
+<!-- LINK TO'S -->
+<!-- HIDE EDIT ITEM IF !CURRENT_USER -->
+						<%# if current_user.id == item.user.id && %>
+						<span><%= link_to "Update Item >>", edit_item_path %></span><br>				
 						<span><%= link_to "Back to Marketplace >>", items_path %></span>
 					</ul>
 				</div>
