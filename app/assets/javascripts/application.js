@@ -21,6 +21,7 @@
 // 		$(this).effect('bounce',{times:1},900);
 // 	});
 // });
+
 $(document).ready(function(){
 	$('.jumbotron').click(function(){
 		$(this).effect('explode');

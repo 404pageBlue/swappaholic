@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141007001444) do
+ActiveRecord::Schema.define(version: 20141007225239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,21 @@ ActiveRecord::Schema.define(version: 20141007001444) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "trades", force: true do |t|
+    t.integer  "trader_id"
+    t.integer  "tradee_id"
+    t.integer  "trader_item_id"
+    t.integer  "tradee_item_id"
+    t.boolean  "success"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "trades", ["tradee_id"], name: "index_trades_on_tradee_id", using: :btree
+  add_index "trades", ["tradee_item_id"], name: "index_trades_on_tradee_item_id", using: :btree
+  add_index "trades", ["trader_id"], name: "index_trades_on_trader_id", using: :btree
+  add_index "trades", ["trader_item_id"], name: "index_trades_on_trader_item_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "firstname"
