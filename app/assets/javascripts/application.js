@@ -15,3 +15,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// $(document).ready(function(){
+// 	$('#welcome').hover(function(){
+// 		$(this).effect('bounce',{times:1},900);
+// 	});
+// });
+$(document).ready(function(){
+	$('.jumbotron').click(function(){
+		$(this).effect('explode');
+	})
+})
