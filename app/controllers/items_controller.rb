@@ -22,6 +22,14 @@ class ItemsController < ApplicationController
   	@item = Item.find(params[:id])
   end
 
+  def search
+  # "I" is for ignoring uppercase and lower case difference. 
+  # LIKE = looking for the stuff that is closest to the keyword
+  # "%# contentgoeshere %" = prevents direct injection of the words typed in the search box into our database (postgreSQL specific)
+    @results = Item.where("name ILIKE ?", "%#{params[:keyword]}%")
+  end
+
+
   def update
   	@item = Item.find(params[:id])
   	if @item.update_attributes(params.require(:item).permit(:name, :description, :condition, :est_value, :willing_to_trade_for))

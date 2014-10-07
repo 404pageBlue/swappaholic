@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   put '/users/:id/edit_profile', to: 'users#update' 
   patch '/users/:id/edit_profile', to: 'users#update'
 
+  get '/search' => 'items#search', as: :search_route
+
 
   resources :items
 

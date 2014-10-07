@@ -50,7 +50,7 @@ items = Item.create([
 		condition: "old and beat up",
 		est_value: 2,
 		willing_to_trade_for: "food",
-		user_id: 2
+		user_id: 1
 	},	
 	{
 		name: "Basketball hoop",
@@ -58,7 +58,7 @@ items = Item.create([
 		condition: "brand new",
 		est_value: 150,
 		willing_to_trade_for: "tv's",
-		user_id: 2
+		user_id: 1
 	},	
 	{
 		name: "Ray Ban sunglasses",
@@ -66,7 +66,7 @@ items = Item.create([
 		condition: "like new",
 		est_value: 180,
 		willing_to_trade_for: "High heels",
-		user_id: 3
+		user_id: 1
 	},	
 	{
 		name: "Lazy Boy",
@@ -74,7 +74,7 @@ items = Item.create([
 		condition: "heavily used",
 		est_value: 75,
 		willing_to_trade_for: "Game consoles",
-		user_id: 3
+		user_id: 1
 	},	
 	{
 		name: "Evander Hollyfield's ear",
@@ -83,7 +83,7 @@ items = Item.create([
 		est_value: 75000,
 		willing_to_trade_for: "Mike Tyson 
 		poster",
-		user_id: 2	
+		user_id: 1	
 	},	
 	{
 		name: "Long Board",
@@ -91,6 +91,6 @@ items = Item.create([
 		condition: "used",
 		est_value: 500,
 		willing_to_trade_for: "Jewelry",
-		user_id: 3		
+		user_id: 1		
 	}
 ]);
