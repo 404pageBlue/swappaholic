@@ -1,14 +1,21 @@
 class ItemsController < ApplicationController
+  # This jsut explains the options it has
+  respond_to :html, :xml, :json
+
+
   def index
   	 @items = Item.all
+     respond_with @items
   end
 
   def show
   	@item = Item.find(params[:id])
+    respond_with @item
   end
 
   def new
     @item = Item.new
+    respond_with @item
   end
 
   def create
