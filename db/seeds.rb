@@ -94,3 +94,16 @@ items = Item.create([
 		user_id: 3		
 	}
 ]);
+
+Trade.destroy_all
+trades = Trade.create([
+	{
+		trader_id: 1,
+		tradee_id: 2,
+		trader_item_id: 27,
+		tradee_item_id: 29,
+		success: true
+	}
+]);
+
+	

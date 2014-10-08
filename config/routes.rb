@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   patch '/users/:id/edit_profile', to: 'users#update'
 
 
-  resources :items
+  resources :items, :trades
 
   # You can have the root of your site routed with "root"
 

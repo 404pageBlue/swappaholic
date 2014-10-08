@@ -23,7 +23,8 @@
 <!-- HIDE EDIT ITEM IF !CURRENT_USER -->
 						<%# if current_user.id == item.user.id && %>
 						<span><%= link_to "Update Item >>", edit_item_path %></span><br>				
-						<span><%= link_to "Back to Marketplace >>", items_path %></span>
+						<span><%= link_to "Back to Marketplace >>", items_path %></span><br>
+						<span><%= link_to "Offer Swap >>", new_trade_path(@trade)%></span>
 					</ul>
 				</div>
 		</div>

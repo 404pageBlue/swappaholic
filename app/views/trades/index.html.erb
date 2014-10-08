@@ -1,0 +1,28 @@
+<h1>All Trades!</h1>
+
+<div>
+	<!-- BOOTSTRAP GRID SYSTEM -->
+	<div id="marketplace_grid">
+		<div class="row">
+			<% @trades.each do |i| %>
+				<div class="col-md-4">
+					<ul id="item_marketplace">
+						<h4 class="label label-info" id="item_label">Trader</h4>
+						<li><%= i.trader.firstname %></li>
+						<h4 class="label label-info" id="item_label">Trader Item</h4>
+						<li><%= i.trader_item.name %></li>
+						<h4 class="label label-info" id="item_label">Tradee</h4>
+						<li><%= i.tradee.firstname %></li>
+						<h4 class="label label-info" id="item_label">Tradee Item</h4>
+						<li><%= i.tradee_item.name %></li>
+						<h4 class="label label-info" id="item_label">Success</h4>
+						<li><%= i.success %></li>
+<!-- 						<span><%#= link_to "View Profile >>", user_path(i.id) %></span> -->
+					</ul>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+
+</div>

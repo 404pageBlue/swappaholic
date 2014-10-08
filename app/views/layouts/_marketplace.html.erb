@@ -8,7 +8,7 @@
 						<h4 class="label label-info" id="item_label">NAME</h4>
 						<li><%= i.name %></li>
 						<h4 class="label label-info" id="item_label">DESCRIPTION</h4>
-						<li><%= i.description %></li>					<h4 class="label label-info" id="item_label">Category</h4>
+						<li><%= i.description %></li>					<h4 class="label label-info" id="item_label">CATEGORY</h4>
 						<li><%= i.category %></li>
 						<h4 class="label label-info" id="item_label">CONDITION</h4>
 						<li><%= i.condition %></li>
@@ -17,7 +17,7 @@
 						<h4 class="label label-info" id="item_label">WILLING TO TRADE FOR</h4>
 						<li><%= i.willing_to_trade_for %></li><h4 class="label label-info" id="item_label">USER ID</h4>
 						<li><%= i.user.firstname %></li>
-						<span><%= link_to "See More >>", item_path(i.id) %></span>
+						<span><%= link_to "See More >>", item_path(i.id) %></span>					
 					</ul>
 				</div>
 			<% end %>
