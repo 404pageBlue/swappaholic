@@ -3,15 +3,17 @@ class ItemsController < ApplicationController
 
   def index
   	 @items = Item.all
+     respond_with @items
   end
 
   def show
   	@item = Item.find(params[:id])
-    # respond_with(@item)
+    respond_with @item
   end
 
   def new
     @item = Item.new
+    respond_with @item
   end
 
   def create
@@ -20,6 +22,13 @@ class ItemsController < ApplicationController
   	@item = Item.create(item_params)
   	redirect_to user_profile_path(current_user)
   end
+
+   def search
+    # "I" is for ignoring uppercase and lower case difference.
+    # LIKE = looking for the stuff that is closest to the keyword
+    # "%# contentgoeshere %" = prevents direct injection of the words typed in the search box into our database (postgreSQL specific)
+    @results = Item.where("name ILIKE ?", "%#{params[:keyword]}%")
+end
 
   def edit
   	@item = Item.find(params[:id])

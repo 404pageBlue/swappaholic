@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  resources :items
+  devise_for :users  
 
-  # scope "api", defaults: {format: "json"} do
-  #   resource :items
-  # end
+  scope "api", defaults: {format: "json"} do
+     resources :items
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -14,9 +15,9 @@ Rails.application.routes.draw do
   get '/users/:id/edit_profile', to: 'users#edit', as: :edit_profile, :as => :user
   put '/users/:id/edit_profile', to: 'users#update' 
   patch '/users/:id/edit_profile', to: 'users#update'
+  get '/search' => 'items#search', as: :search_route
 
 
-  resources :items
 
   # You can have the root of your site routed with "root"
 
