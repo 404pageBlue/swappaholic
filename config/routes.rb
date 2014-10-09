@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :items
+  get 'trades/index'
+
+  get 'trades/new/:id', to: 'trades#new', as: :new_trade_id
+
+  get 'trades/create'
+
+  get 'trades/show'
+
+  resources :items, :trades
   devise_for :users  
 
   scope "api", defaults: {format: "json"} do
@@ -16,6 +24,7 @@ Rails.application.routes.draw do
   put '/users/:id/edit_profile', to: 'users#update' 
   patch '/users/:id/edit_profile', to: 'users#update'
   get '/search' => 'items#search', as: :search_route
+  post '/trades/create' => 'trades#create', as: :transaction
 
 
 
