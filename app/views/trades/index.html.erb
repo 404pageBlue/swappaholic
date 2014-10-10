@@ -1,0 +1,33 @@
+
+</br>
+<h2> Pitches AND Offers</h2>
+<%= @trades.each do |trade| %>
+  		<strong>Trader: </strong><%= trade.trader.firstname %><%= trade.trader.lastname %> </br>
+  		<strong>Item: </strong><%= trade.trader_item.name %> </br>
+  		<strong>Description: </strong><%= trade.trader_item.description %> </br>
+  		<strong>Condition: </strong><%= trade.trader_item.condition %> </br>
+  		<strong>Est value: </strong><%= trade.trader_item.est_value %> </br>
+
+		<p> ----------------</p>
+		
+  		<strong>Tradee: </strong><%= trade.tradee.firstname %><%= trade.tradee.lastname %> </br>
+  		<strong>Item: </strong><%= trade.tradee_item.name %> </br>
+  		<strong>Description: </strong><%= trade.tradee_item.description %> </br>
+  		<strong>Condition: </strong><%= trade.tradee_item.condition %> </br>
+  		<strong>Est value: </strong><%= trade.tradee_item.est_value %> </br>
+
+    <% if current_user.id == trade.tradee.id%>
+      <%= form_for(:trade, :url => url_for(:controller => 'trades', :action => 'exchange')) do |f| %>
+      <%= f.hidden_field :trade_id, value: trade.id %>
+      <%= f.submit "Confirm Trade" %>
+
+    <% end %>
+    <% else %>
+    <p> Waiting confirmation from tradee </p>
+    <% end %>
+
+		<p> ------------------------------------------------------------------ </p>
+
+		<p> ------------------------------------------------------------------ </p>
+  	<% end %>
+

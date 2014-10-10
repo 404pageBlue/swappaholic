@@ -1,0 +1,22 @@
+<div>
+<h2> Item you are trading for </h2>
+<p>name</p><%= @item.name %>
+<p>description</p><%= @item.description %>
+<p>category</p><%= @item.category %>
+<p>condition</p><%= @item.condition %>
+<p>est_value</p><%= @item.est_value %>
+<p>willing to trade for:</p><%= @item.willing_to_trade_for %>
+</div>
+
+
+<div>
+<h2> Item you are offering </h2>
+</div>
+
+<%= form_for(:trade, :url => url_for(:controller => 'trades', :action => 'create')) do |f| %>
+	<%= f.collection_select(:trader_item_id, current_user.items.all, :id, :name) %>
+     <%= f.hidden_field :trader_id, value: current_user.id %>
+     <%= f.hidden_field :tradee_id, value: @item.user.id %>
+     <%= f.hidden_field :tradee_item_id, value: @item.id %>
+      <%= f.submit "Request Trade" %>
+	<% end %>

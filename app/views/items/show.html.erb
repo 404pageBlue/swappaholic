@@ -29,5 +29,15 @@
 		</div>
 	</div>
 
+	<!-- <%#= link_to "Propose Trade", insert link for new.html.erb %> -->
 
 </div>
+
+<% if current_user.items.exists?(id: @item.id) %>
+<p> DUDE you cannot trade with yourself! </p>
+<% else %>
+<span><%= link_to "Offer Trade", new_trade_id_path(@item)%></span>
+
+<% end %>
+
+

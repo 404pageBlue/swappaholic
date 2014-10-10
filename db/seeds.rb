@@ -8,29 +8,29 @@
 
 User.destroy_all
 users = User.create!([
-{
-firstname: "Brett",
-lastname: "Kadowaki",
-email: "brett.kadowaki@gmail.com",
-password: "12345678",
-password_confirmation: "12345678"
-#encrypted_password: '#$taawktljasktlw4aaglj'
-},
-{
-firstname: "Justin",
-lastname: "Jitti",
-email: "justin@gmail.com",
-password: "12345678",
-password_confirmation: "12345678"
-}, 
-{
-firstname: "Kevin",
-lastname: "Backend",
-email: "kevin@gmail.com",
-password: "12345678",
-password_confirmation: "12345678"
-}
-]);
+	{
+		firstname: "Brett",
+		lastname: "Kadowaki",
+		email: "brett.kadowaki@gmail.com",
+		password: "12345678",
+		password_confirmation: "12345678"
+		#encrypted_password: '#$taawktljasktlw4aaglj'
+	},
+	{
+		firstname: "Justin",
+		lastname: "Jitti",
+		email: "justin@gmail.com",
+		password: "12345678",
+		password_confirmation: "12345678"
+	}, 
+	{
+		firstname: "Kevin",
+		lastname: "Backend",
+		email: "kevin@gmail.com",
+		password: "12345678",
+		password_confirmation: "12345678"
+	}
+	]);
 
 Item.destroy_all
 items = Item.create([
@@ -98,5 +98,16 @@ items = Item.create([
 		est_value: 500,
 		willing_to_trade_for: "Jewelry",
 		user_id: 3		
+	}
+]);
+
+Trade.destroy_all
+trades = Trade.create([
+	{
+		trader_id: 1,
+		tradee_id: 2,
+		trader_item_id: 27,
+		tradee_item_id: 29,
+		success: true
 	}
 ]);
