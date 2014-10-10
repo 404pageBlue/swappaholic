@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :items
   devise_for :users
+  # scope is a keyword CMD
+  # "api" is the URL name. It can be any name you want to call it
+  # defaults: {format: "json"} do --> this CMD tells the ruby to change its default to JSON format
+  # rsources :item references the controller that is being targeted
+  scope "api", defaults: {format: "json"} do 
+    resources :items
+  end
 
-  # scope "api", defaults: {format: "json"} do
-  #   resource :items
-  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -14,9 +19,6 @@ Rails.application.routes.draw do
   get '/users/:id/edit_profile', to: 'users#edit', as: :edit_profile, :as => :user
   put '/users/:id/edit_profile', to: 'users#update' 
   patch '/users/:id/edit_profile', to: 'users#update'
-
-
-  resources :items
 
   # You can have the root of your site routed with "root"
 

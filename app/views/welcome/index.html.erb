@@ -1,49 +1,42 @@
-<h1 id="welcome">Welcome to the community of Swappaholics!</h1>
+  <div id='slideshowContainer'>
+  <div class="cn-bar">
+                <div class="cn-nav">
+                    <a href="#" class="cn-nav-prev">
+                        <span>Previous</span>
+                            <div style="background-image:url(${prevSource});"></div> 
+                    </a>
+                    <a href="#" class="cn-nav-next">
+                        <span>Next</span>
+                        <div style="background-image:url(${nextSource});"></div>
+                    </a>
+                </div><!-- cn-nav -->
+                <div class="cn-nav-content">
+                    <div class="cn-nav-content-prev">
+                        <span>Previous Trade</span>
+                        <h3>${prevTitle}</h3>
+                    </div>
+                    <div class="cn-nav-content-current">
+                        <span>Recent Trade</span>
+                        <h2>${currentTitle}</h2>
+                    </div>
+                    <div class="cn-nav-content-next">
+                        <span>Next Trade</span>
+                        <h3>${nextTitle}</h3>
+                    </div>
+                </div><!-- cn-nav-content -->
+            </div><!-- cn-bar -->
 
-<!-- JUMBOTRON -->
-<div class="container">
-	<div class="jumbotron">
-	  <h1>HOW IT WORKS</h1>
-	  <p>The 4T's</p>
-	  	<ul>
-	  		<li>Post TRASH</li>
-	  		<li>Find TREASURE</li>
-	  		<li>Barter TRADE</li>
-	  		<li>Enjoy TRIUMPH</li>
-	  	</ul>
-	  <button class="btn btn-primary btn-lg" id="user_action1"><%= link_to "Sign Up", new_user_registration_path %></button>
-	</div>
-</div>
 
-	<a href="#" class="btn btn-primary">Primary</a>
-	<a href="#" class="btn btn-success">Success</a>
-	<a href="#" class="btn btn-info">Info</a>
-	<a href="#" class="btn btn-warning">Warning</a>
-	<a href="#" class="btn btn-danger">Danger</a>
-
-<div class="container">
-	<div id="row">
-		<div class="col-md-4">
-			<% @users.each do |u| %>
-				<ul>
-					<h4>First Name</h4>
-					<li><%= u.firstname %></li>
-					<h4>Last Name</h4>
-					<li><%= u.lastname %></li>			
-					<h4>Email</h4>
-					<li><%= u.email %></li>
-					<!-- 	<h4>Email</h4> -->
-					<!-- 	<li><#%= u.email %></li> -->
-					<!-- 			<h4>Rating</h4> -->
-					<!-- <li> --><%#= u.rating %><!-- </li> -->
-				</ul>
-			<% end %>
-		</div>
-	</div>
-</div>
-
-<!-- MARKETPLACE -->
-	<div class="container">
-	<%= render partial: 'layouts/marketplace' %>
-
-	</div>
+        <div class="container">
+            <div class="wrapper">
+                <div id="cn-slideshow" class="cn-slideshow">
+                    <div class="cn-images">
+                         <img src="/assets/1.jpg" title="Beautiful Scenery 1" data-thumb="assets/1.jpg"/>
+                        <img src="assets/1.jpg" alt="image02" title="Beautiful Scenery 2" data-thumb="assets/2.jpg"/>
+                        <img src="images/3.jpg" alt="image03" title="Beautiful Scenery 3" data-thumb="images/thumbs/3.jpg"/>
+                        <img src="images/large/4.jpg" alt="image04" title="Beautiful Scenery 4" data-thumb="images/thumbs/4.jpg"/>
+                    </div><!-- cn-images -->
+                </div><!-- cn-slideshow -->
+            </div>
+        </div>
+    </div>
