@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'trades/show'
 
+  get 'trades/exchange'
+
   resources :items, :trades
   devise_for :users  
 
@@ -25,6 +27,8 @@ Rails.application.routes.draw do
   patch '/users/:id/edit_profile', to: 'users#update'
   get '/search' => 'items#search', as: :search_route
   post '/trades/create' => 'trades#create', as: :transaction
+  post '/trades/exchange' => 'trades#exchange'
+
 
 
 

@@ -16,8 +16,18 @@
   		<strong>Condition: </strong><%= trade.tradee_item.condition %> </br>
   		<strong>Est value: </strong><%= trade.tradee_item.est_value %> </br>
 
+    <% if current_user.id == trade.tradee.id%>
+      <%= form_for(:trade, :url => url_for(:controller => 'trades', :action => 'exchange')) do |f| %>
+      <%= f.hidden_field :trade_id, value: trade.id %>
+      <%= f.submit "Confirm Trade" %>
+
+    <% end %>
+    <% else %>
+    <p> Waiting confirmation from tradee </p>
+    <% end %>
+
 		<p> ------------------------------------------------------------------ </p>
 
 		<p> ------------------------------------------------------------------ </p>
-  		<% end %>
+  	<% end %>
 

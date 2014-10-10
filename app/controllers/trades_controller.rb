@@ -18,7 +18,20 @@ class TradesController < ApplicationController
 		#end
 	end
 
-  def show
+  def exchange
+    
+    trader_item =  Trade.find(params[:trade][:trade_id]).trader_item
+    tradee_item =  Trade.find(params[:trade][:trade_id]).tradee_item
+
+    trader_id = trader_item.user_id
+    tradee_id = tradee_item.user_id
+
+    trader_item.user_id = tradee_id
+    tradee_item.user_id = trader_id
+
+    trader_item.save
+    tradee_item.save
+
   end
 
 end
