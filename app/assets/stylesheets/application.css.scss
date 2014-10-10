@@ -57,10 +57,15 @@ body {
 	font-size: 11px;
 	padding: 2px;
 }
+// MARKETPLACE THUMBNAIL STYLING ON HOVER
+.test {
+	background-color: blue;
+}
 
 // USER PROFILE SHOW PAGE 
 #main_user_container {
-	background-color: #4D5D6C;
+	background-color: #EEEEEE;
+	border-radius: 5px;
 }
 // EDIT PROFILE PAGE
 #edit_profile {
@@ -94,14 +99,3 @@ body {
 	left: 0;
 	top: 0;
 }
-
-// #my-carousel div{  
-//     display: block;  
-//     border: 1px solid #ccc;  
-//     overflow: hidden;  
-//     width: 16%;  
-//     margin: 2%;  
-//     float: left;   
-//     height: 100px;  
-//     position: relative;
-// }  

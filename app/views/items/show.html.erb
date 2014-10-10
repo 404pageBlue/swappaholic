@@ -21,9 +21,10 @@
 
 <!-- LINK TO'S -->
 <!-- HIDE EDIT ITEM IF !CURRENT_USER -->
-						<%# if current_user.id == item.user.id && %>
-						<span><%= link_to "Update Item >>", edit_item_path %></span><br>				
-						<span><%= link_to "Back to Marketplace >>", items_path %></span>
+						<% if current_user && current_user.items.exists?(id: @item.id) %>
+						<span><%= link_to "Update Item >>", edit_item_path %></span><br>
+						<% else %>			
+						<span><%= link_to "Back to Marketplace >>", items_path %></span> <% end %>
 					</ul>
 				</div>
 		</div>
@@ -33,7 +34,7 @@
 
 </div>
 
-<% if current_user.items.exists?(id: @item.id) %>
+<% if current_user && current_user.items.exists?(id: @item.id) %>
 <p> DUDE you cannot trade with yourself! </p>
 <% else %>
 <span><%= link_to "Offer Trade", new_trade_id_path(@item)%></span>
