@@ -19,12 +19,13 @@
 
 // NAV BAR STYLING
 .navbar {
-	// padding-bottom: 2px;
+	// background-color: #34A7EA;
 }
 #welcome_tag {
-	padding-top: 11.5px;
+	padding-top: 14.5px;
 	padding-bottom: 9.5px;	
 	margin-right: 4px;
+	color: white;
 }
 .navbar-right {
 	padding-right: 15px;
@@ -35,9 +36,15 @@
 	color: white;
 }
 
+// BUTTON BAR
+#button_bar {
+	text-align: center;
+	padding-bottom: 9.5px;
+}
+
 // MAIN BODY STYLING
 body {
-	padding-top: 30px;
+	padding-top: 0px;
 }
 
 // _MARKETPLACE STYLING
@@ -51,6 +58,10 @@ body {
 	padding: 2px;
 }
 
+// USER PROFILE SHOW PAGE 
+#main_user_container {
+	background-color: #4D5D6C;
+}
 // EDIT PROFILE PAGE
 #edit_profile {
 	margin-top: 30px;
@@ -64,4 +75,33 @@ body {
 #lastname_box {
 	margin-left: 2px;
 }
+// ITEMS PROFILE SHOW
+.items_users_show {
+	padding: 0;
+  list-style-type: none;
+}
+// ITEMS CAROUSEL 
+#slideshow {
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+.slide {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 
+// #my-carousel div{  
+//     display: block;  
+//     border: 1px solid #ccc;  
+//     overflow: hidden;  
+//     width: 16%;  
+//     margin: 2%;  
+//     float: left;   
+//     height: 100px;  
+//     position: relative;
+// }  

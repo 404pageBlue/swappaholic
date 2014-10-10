@@ -16,14 +16,54 @@
 //= require turbolinks
 //= require_tree .
 
+
+	
+
+
 // $(document).ready(function(){
-// 	$('#welcome').hover(function(){
-// 		$(this).effect('bounce',{times:1},900);
+// 	$('.your-class').slick({
+// 	  setting-name: setting-value
 // 	});
 // });
 
-$(document).ready(function(){
-	$('.jumbotron').click(function(){
-		$(this).effect('explode');
-	})
-})
+// $('.slider-for').slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     arrows: false,
+//     fade: true,
+//     asNavFor: '.slider-nav'
+// });
+
+// $('.slider-nav').slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     asNavFor: '.slider-for',
+//     dots: true,
+//     centerMode: true,
+//     focusOnSelect: true
+// });
+
+
+
+// $(document).ready(function(){
+// 	$('#first').click(function(){
+// 		$(this).animate({left:'+=10px'},500)
+// 	});
+// });
+
+// function slideCarouselBox(){
+// 	$(document).ready(function(){
+// 		$('#first_car').animate({left:'+=16%'},500)
+// 		$('#second_car').animate({left:'+=16%'},500)		
+// 		$('#third_car').animate({left:'+=16%'},500)
+// 		$('#fourth_car').animate({left:'+=16%'},500)
+// 		$('#fifth_car').animate({left:'+=16%'},500)
+// 	})
+// }
+
+// setInterval("slideCarouselBox()",3000);
+
+
+
+
+
