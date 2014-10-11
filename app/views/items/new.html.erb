@@ -35,6 +35,11 @@
 					<%= f.text_field :willing_to_trade_for %>
 				</div><br>
 
+				<div class="field">
+  				<%= f.label :avatar %><br />
+  				<%= f.file_field :avatar %>
+				</div>
+
 					<%= f.submit "Post Item" %>
 
 				<% end %>

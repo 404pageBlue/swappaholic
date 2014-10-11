@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-  	item_params = params.require(:item).permit(:name, :description, :condition, :est_value, :willing_to_trade_for, :category)
+  	item_params = params.require(:item).permit(:name, :description, :condition, :est_value, :willing_to_trade_for, :category, :avatar)
   	item_params[:user_id] = current_user.id
   	@item = Item.create(item_params)
   	redirect_to user_profile_path(current_user)
