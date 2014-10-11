@@ -17,6 +17,12 @@
 @import "bootstrap";
 @import "welcome";
 
+// MAIN CONTAINER
+#mainmain {
+	max-width: 100%;
+	overflow: hidden;	
+}
+
 // NAV BAR STYLING
 .navbar {
 	// background-color: #34A7EA;
@@ -98,4 +104,19 @@ body {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+
+// webkit test
+#jumbobackground {
+	z-index: -2;
+}
+
+@-webkit-keyframes rotate {
+from { -webkit-transform: rotate(0deg);
+}
+to { -webkit-transform: rotate(360deg);
+}
+}
+.jumbotron img{ -webkit-animation-name: rotate; -webkit-animation-duration: 155s; -webkit-animation-iteration-count: infinite; -webkit-transition-timing-function: linear;
 }
