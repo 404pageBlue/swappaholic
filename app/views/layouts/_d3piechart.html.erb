@@ -1,0 +1,108 @@
+
+<div id="pieChart"></div>
+
+	<script>
+		var pie = new d3pie("pieChart", {
+			"header": {
+				"title": {
+					"text": "Items Avaliable",
+					"fontSize": 24,
+					"font": "open sans"
+				},
+				"subtitle": {
+					"text": "Check out the most wanted items",
+					"color": "#999999",
+					"fontSize": 12,
+					"font": "open sans"
+				},
+				"titleSubtitlePadding": 9
+			},
+			"footer": {
+				"color": "#999999",
+				"fontSize": 10,
+				"font": "open sans",
+				"location": "bottom-left"
+			},
+			"size": {
+				"canvasWidth": 590,
+				"pieInnerRadius": "40%",
+				"pieOuterRadius": "90%"
+			},
+			"data": {
+				"sortOrder": "value-desc",
+				"content": [
+					<% @items.each do |item| %>
+//  ""because javascript assume its a variable
+					{  
+						"label": "<%= item.name %>",
+						"value": 264131,
+						"color": "#2484c1"
+					},
+					{
+						"label": "<%= item.category%>",
+						"value": 218812,
+						"color": "#f6ac09"
+					},
+					<% end %>
+					/* {
+						"label": "Java",
+						"value": 157618,
+						"color": "#4daa4b"
+					},
+					{
+						"label": "PHP",
+						"value": 114384,
+						"color": "#b626f0"
+					},
+					{
+						"label": "Python",
+						"value": 95002,
+						"color": "#dc0b0b"
+					} */
+				]
+			},
+			"labels": {
+				"outer": {
+					"pieDistance": 32
+				},
+				"inner": {
+					"hideWhenLessThanPercentage": 3
+				},
+				"mainLabel": {
+					"fontSize": 11
+				},
+				"percentage": {
+					"color": "#ffffff",
+					"decimalPlaces": 0
+				},
+				"value": {
+					"color": "#adadad",
+					"fontSize": 11
+				},
+				"lines": {
+					"enabled": true
+				}
+			},
+			"effects": {
+				"load": {
+					"speed": 1400
+				},
+				"pullOutSegmentOnClick": {
+					"effect": "linear",
+					"speed": 400,
+					"size": 8
+				}
+			},
+			"misc": {
+				"gradient": {
+					"enabled": true,
+					"percentage": 100
+				}
+			},
+			"callbacks": {
+				"onMouseoverSegment": null,
+				"onMouseoutSegment": null,
+				"onClickSegment": null
+			}
+		});
+	</script>
