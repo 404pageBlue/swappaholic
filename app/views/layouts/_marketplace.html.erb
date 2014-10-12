@@ -3,7 +3,7 @@
 			<% @items.each do |i| %>
 				<div class="col-sm-6 col-md-4">
 						<div class="thumbnail">
-							<%= image_tag "desk.jpg"%>
+							<%= @item.avatar.url(:medium) %>
 							<div class="caption" id="thumbcaptaion">
 								<h3><%= i.name %></h3>
 											<ul id="item_marketplace">
