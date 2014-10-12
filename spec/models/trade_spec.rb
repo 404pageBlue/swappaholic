@@ -1,5 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Trade, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Trade do
+  it '#new' do
+    @item = Item.new
+    expect(@item).to eq(@item)
+  end
+
+  it '#new' do
+    @item = Item.new
+    expect(@item).to be_instance_of(Item)
+  end
 end
