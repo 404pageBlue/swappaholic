@@ -64,8 +64,9 @@ body {
 	padding: 2px;
 }
 // MARKETPLACE THUMBNAIL STYLING ON HOVER
-.test {
-	background-color: blue;
+.selected_thumb {
+	background: #EEEEEE !important;
+	border-radius: 50px !important;
 }
 
 // USER PROFILE SHOW PAGE 
@@ -106,17 +107,14 @@ body {
 	top: 0;
 }
 
-
-// webkit test
-#jumbobackground {
-	z-index: -2;
-}
-
+// WEBKIT TEST
 @-webkit-keyframes rotate {
 from { -webkit-transform: rotate(0deg);
 }
 to { -webkit-transform: rotate(360deg);
 }
 }
-.jumbotron img{ -webkit-animation-name: rotate; -webkit-animation-duration: 155s; -webkit-animation-iteration-count: infinite; -webkit-transition-timing-function: linear;
+.jumbotron img{ -webkit-animation-name: rotate; -webkit-animation-duration: 90s; -webkit-animation-iteration-count: infinite; -webkit-transition-timing-function: linear;
+	float: right;
+	margin-top: -200px;
 }

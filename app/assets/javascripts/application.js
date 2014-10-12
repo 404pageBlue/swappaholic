@@ -16,9 +16,9 @@
 //= require turbolinks
 //= require_tree .
 
-// $(document).ready(function(){
-// 	$('.thumbnail').hover(function(){
-// 		$(this).toggleClass('test');
-// 	});
-// });
+$(document).ready(function(){
+	$('.thumbnail').hover(function(){
+		$(this).toggleClass('selected_thumb');
+	});
+});
 
