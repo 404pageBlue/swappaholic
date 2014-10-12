@@ -33,7 +33,7 @@
 					  	<h4 class="label label-info" id="item_label">Items</h4>
 								<% current_user.items.each do |i|%>
 								<ul class="items_users_show">
-									<%= i.name %> - <%= link_to "See More >>", item_path(i)%><br>								
+									<%= i.name %> - <%= link_to "See More >>", item_path(i)%><br><%=link_to "Delete Item", item_path(i), method: :delete %><br>
 								</ul>
 								<% end %>
 							<span><%= link_to "Post New Item >>", new_item_path(@item)%></span>
@@ -46,3 +46,6 @@
 		</div>
 	</div>
 </div>
+
+<%= render partial: 'layouts/d3piechart' %> 
+
