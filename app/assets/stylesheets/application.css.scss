@@ -68,12 +68,19 @@ body {
 	background: #EEEEEE !important;
 	border-radius: 50px !important;
 }
+.thumbnail img {
+	padding-top: 20px;
+}
 
 // USER PROFILE SHOW PAGE 
 #main_user_container {
-	background-color: #EEEEEE;
+	// background-color: #EEEEEE;
 	border-radius: 5px;
 }
+.nav-stacked {
+	border-bottom: transparent !important;
+}
+
 // EDIT PROFILE PAGE
 #edit_profile {
 	margin-top: 30px;
@@ -91,20 +98,6 @@ body {
 .items_users_show {
 	padding: 0;
   list-style-type: none;
-}
-// ITEMS CAROUSEL 
-#slideshow {
-	width: 500px;
-	height: 500px;
-	margin: 0 auto;
-	position: relative;
-}
-.slide {
-	width: 500px;
-	height: 500px;
-	position: absolute;
-	left: 0;
-	top: 0;
 }
 
 // WEBKIT TEST
