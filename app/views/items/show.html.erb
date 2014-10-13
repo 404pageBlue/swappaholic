@@ -1,6 +1,6 @@
-<h1>See Individual Item!</h1>
+<div class="container">
+<h1><%= @item.user.firstname %>'s <%=@item.condition %> <%= @item.name %>!</h1>
 
-<div>
 <!-- BOOTSTRAP GRID SYSTEM -->
 	<div id="marketplace_grid">
 		<div class="row">
@@ -18,14 +18,22 @@
 						<li><%= @item.est_value %></li>
 						<h4 class="label label-info" id="item_label">WILLING TO TRADE FOR</h4>
 						<li><%= @item.willing_to_trade_for %></li>
-						<%= image_tag @item.avatar.url(:square) %>
+						<%= image_tag @item.avatar.url(:square) %><br>
 
 <!-- LINK TO'S -->
 <!-- HIDE EDIT ITEM IF !CURRENT_USER -->
 						<% if current_user && current_user.items.exists?(id: @item.id) %>
 						<span><%= link_to "Update Item >>", edit_item_path %></span><br>
-						<% else %>			
-						<span><%= link_to "Back to Marketplace >>", items_path %></span> <% end %>
+						<% else %>
+<!-- MARKETPLACE LINK -->
+						<span><%= link_to "Back to Marketplace >>", items_path %></span><br> <% end %>
+<!-- HIDE OFFER TRADE LINK IF ITEM BELONGS TO CURRENT_USER -->
+						<% if current_user && current_user.items.exists?(id: @item.id) %>
+						<p> DUDE you cannot trade with yourself! </p>
+						<% else %>
+						<span><%= link_to "Offer Trade >>", new_trade_id_path(@item)%></span>
+
+						<% end %>
 					</ul>
 				</div>
 		</div>
@@ -35,11 +43,6 @@
 
 </div>
 
-<% if current_user && current_user.items.exists?(id: @item.id) %>
-<p> DUDE you cannot trade with yourself! </p>
-<% else %>
-<span><%= link_to "Offer Trade", new_trade_id_path(@item)%></span>
 
-<% end %>
 
 

@@ -94,6 +94,22 @@ body {
 #lastname_box {
 	margin-left: 2px;
 }
+
+// ITEMS NEW
+#item_condition {
+	width: 100%;
+}
+#item_category {
+	width: 100%;
+}
+#item_willing_to_trade_for {
+	width: 100%;
+}
+.input-group {
+	// width: 174px;
+	width: 100%;
+}
+
 // ITEMS PROFILE SHOW
 .items_users_show {
 	padding: 0;
@@ -115,4 +131,5 @@ to { -webkit-transform: rotate(360deg);
 // D3 PIE CHART
 #pieChart {
 	z-index: 0;
+	float: right;
 }

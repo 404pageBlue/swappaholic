@@ -1,48 +1,65 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-3">
 			<h2>Post New Item</h2>
 
 				<%= form_for @item do |f| %>
 
 					<%= f.label :name %>
 				<div>
-					<%= f.text_field :name %>
+					<div class="input-group">
+						<%= f.text_field :name, :class => "form-control" %>
+					</div>
 				</div>
-
+					
 					<%= f.label :description %>
+					
 				<div>
-					<%= f.text_field :description %>
+					<div class="input-group">
+						<%= f.text_field :description, :class => "form-control" %>
+					</div>
 				</div>
 
 				<%= f.label :category %>
 				<div>
-					<%= f.select :category, ["Art","Business & Industrial", "Camera & Photo", "Clothing, Shoes & Accessories", "Coins & Paper Money", "Computers/Tablets & Networking", "DVDs & Movies", "Home & Garden", "Jewelry", "Motors Parts & Accessories", "Music", "Specialty Services", "Toys & Hobbies", "Everything Else"]%>
+					<%= f.select :category, ["Art","Business & Industrial", "Camera & Photo", "Clothing, Shoes & Accessories", "Coins & Paper Money", "Computers/Tablets & Networking", "DVDs & Movies", "Home & Garden", "Jewelry", "Motors Parts & Accessories", "Music", "Specialty Services", "Toys & Hobbies", "Everything Else"] %>
 				</div>
 					<%= f.label :condition %>
 				<div>
-					<%= f.text_field :condition %>	
+					<%= f.select :condition, ["Brand New","Like New","Very Good","Good","Acceptable","Poor","Broken"] %>	
 				</div>	
 
 					<%= f.label :est_value %>
 				<div>
-					<%= f.text_field :est_value %>		
+					<div class="input-group">
+						<span class="input-group-addon">$</span>
+							<%= f.text_field :est_value, :class => "form-control" %>		
+					  <span class="input-group-addon">.00</span>
+					</div>
 				</div>
 				
 					<%= f.label :willing_to_trade_for %>
 				<div>
-					<%= f.text_field :willing_to_trade_for %>
-				</div><br>
+					<%= f.select :willing_to_trade_for, ["Art","Business & Industrial", "Camera & Photo", "Clothing, Shoes & Accessories", "Coins & Paper Money", "Computers/Tablets & Networking", "DVDs & Movies", "Home & Garden", "Jewelry", "Motors Parts & Accessories", "Music", "Specialty Services", "Toys & Hobbies", "Everything Else"]%>
+<!-- 
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+					  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>
+					  <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+					  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another link</a></li>
+					</ul> -->
+				</div>
 
 				<div class="field">
-  				<%= f.label :avatar %><br />
-  				<%= f.file_field :avatar %>
+  				<%= f.label :avatar %><br>
+  				<%= f.file_field :avatar %><br>
 				</div>
 
 					<%= f.submit "Post Item" %>
 
 				<% end %>
+
+				<span><%= link_to "Cancel >>", user_profile_path(current_user) %></span>
 		</div>
 	</div>		
 </div>

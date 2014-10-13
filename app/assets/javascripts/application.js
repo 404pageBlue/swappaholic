@@ -16,9 +16,15 @@
 //= require turbolinks
 //= require_tree .
 
+// INTERACTIVE SELECTED THUMBNAILS IN ITEM MARKETPLACE
 $(document).ready(function(){
 	$('.thumbnail').hover(function(){
 		$(this).toggleClass('selected_thumb');
 	});
 });
+
+// INTERACTIVE MARKETPLACE SHOW 
+// $(document).ready(function(){
+
+// });
 
