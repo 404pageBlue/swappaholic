@@ -23,15 +23,24 @@
 <!-- LINK TO'S -->
 <!-- HIDE EDIT ITEM IF !CURRENT_USER -->
 						<% if current_user && current_user.items.exists?(id: @item.id) %>
-						<span><%= link_to "Update Item >>", edit_item_path %></span><br>
+						<span><%= link_to "Update Item", edit_item_path %></span><br>
 						<% else %>
 <!-- MARKETPLACE LINK -->
-						<span><%= link_to "Back to Marketplace >>", items_path %></span><br> <% end %>
+						<button class="btn btn-primary changeanchor">
+							<%= link_to "Back to Marketplace", items_path %>
+						</button>
+							<% end %>
 <!-- HIDE OFFER TRADE LINK IF ITEM BELONGS TO CURRENT_USER -->
 						<% if current_user && current_user.items.exists?(id: @item.id) %>
 						<p> DUDE you cannot trade with yourself! </p>
 						<% else %>
-						<span><%= link_to "Offer Trade >>", new_trade_id_path(@item)%></span>
+<!-- 						<button class="btn btn-primary changeanchor">
+							<%#= link_to "Offer Trade", new_trade_id_path(@item)%>
+						</button> -->
+<!-- MODAL BUTTON: TRADE OFFER -->
+						<button class="btn btn-success" data-toggle="modal" data-target="#trademodal">
+						  Offer Trade!
+						</button>
 
 						<% end %>
 					</ul>
@@ -43,6 +52,49 @@
 
 </div>
 
+<!-- MODAL BOX: OFFER TRADE -->
+<div class="modal fade" id="trademodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Offer Trade for <%= @item.user.firstname %>'s <%=@item.condition %> <%= @item.name %>!</h4>
+      </div>
+      <div class="modal-body">
+        	<div>
+						<h2> Item Information </h2>
+						<h4 class="label label-info" id="item_label">NAME</h4><br>
+						<%= @item.name %><br>
+						<h4 class="label label-info" id="item_label">DESCRIPTION</h4><br>
+							<%= @item.description %><br>
+						<h4 class="label label-info" id="item_label">CATEGORY</h4><br>
+						<%= @item.category %><br>
+						<h4 class="label label-info" id="item_label">CONDITION</h4><br>
+						<%= @item.condition %><br>
+						<h4 class="label label-info" id="item_label">ESTIMATED VALUE</h4><br>
+						<%= @item.est_value %><br>
+						<h4 class="label label-info" id="item_label">WILLING TO TRADE FOR</h4><br>
+						<%= @item.willing_to_trade_for %><br>
+						</div>
 
+
+						<div>
+						<h2> Item you are offering </h2>
+						</div>
+
+						<%= form_for(:trade, :url => url_for(:controller => 'trades', :action => 'create')) do |f| %>
+							<%= f.collection_select(:trader_item_id, current_user.items.all, :id, :name) %>
+						     <%= f.hidden_field :trader_id, value: current_user.id %>
+						     <%= f.hidden_field :tradee_id, value: @item.user.id %>
+						     <%= f.hidden_field :tradee_item_id, value: @item.id %>
+						      <%= f.submit "Request Trade" %>
+							<% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 

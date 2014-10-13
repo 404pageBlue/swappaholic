@@ -15,7 +15,7 @@
 						<li><%#= i.rating %></li>
 						<h4 class="label label-info" id="item_label">Location</h4>
 						<li><%#= i.location %></li> -->
-						<span><%= link_to "View Profile >>", user_path(i.id) %></span>
+						<span><%= link_to "View Profile", user_path(i.id) %></span>
 					</ul>
 				</div>
 			<% end %>

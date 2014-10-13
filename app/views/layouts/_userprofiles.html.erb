@@ -26,21 +26,31 @@
 							<%= current_user.lastname %><br>						
 							<h4 class="label label-info" id="item_label">Email</h4><br>
 							<%= current_user.email %><br>
-							<span><%= link_to "Edit Profile >>", user_path(@user) %></span>
+<!-- MODAL BUTTON: USER PROFILE EDIT -->
+							<button class="btn btn-primary" data-toggle="modal" data-target="#edituserprofilemodel">
+							  Edit Profile
+							</button>
 						</div>
 <!-- ITEMS CONTENT SECTION -->
 					  <div class="tab-pane" id="items">
-					  	<h4 class="label label-info" id="item_label">Items</h4>
+					  	<h4 class="label label-info" id="item_label">Items</h4><br>
 								<% current_user.items.each do |i|%>
 								<ul class="items_users_show">
-									<%= i.name %> - <%= link_to "See More >>", item_path(i)%><br><%=link_to "Delete Item", item_path(i), method: :delete %><br>
+									<%= i.name %> - <%= link_to "See More", item_path(i)%><br>
+									<%=link_to "Delete Item", item_path(i), method: :delete %><br>
 								</ul>
 								<% end %>
-							<span><%= link_to "Post New Item >>", new_item_path(@item)%></span>
+
+							<button class="btn btn-primary changeanchor">
+							  <%= link_to "Post New Item", new_item_path(@item)%>
+							</button>
 					  </div>
 <!-- SWAP CONTENT SECTION -->
 					  <div class="tab-pane" id="swaps">
-					  	<span><%= link_to "Find Treasure >>", items_path %></span>
+					  	<h4 class="label label-info" id="item_label">BACK TO MARKETPLACE</h4><br>
+					  	<button class="btn btn-primary changeanchor">
+					  		<%= link_to "Find Treasure", items_path %>
+					  	</button>
 					  </div>
 					</div>
 		</div>
@@ -48,4 +58,50 @@
 </div>
 
 <%= render partial: 'layouts/d3piechart' %> 
+
+<!-- MODAL BOX: USER PROFILE EDIT -->
+<div class="modal fade" id="edituserprofilemodel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+			        <%= form_for @user do |f| %>
+								<div class="edit_box">
+									<h4 class="label label-info" id="item_label">First Name</h4>
+								</div>
+								<div class="input-group">
+							    <%= f.text_field :firstname, :class => "form-control" %>
+							  </div>
+								<div class="edit_box">
+									<h4 class="label label-info" id="item_label">Last Name</h4>
+								</div>
+								<div class="input-group">
+							     <%= f.text_field :lastname, :class => "form-control" %>
+							  </div>
+
+								<div class="edit_box">
+									<h4 class="label label-info" id="item_label">Email</h4>
+								</div>
+								<div class="input-group">
+						     <%= f.text_field :email, :class => "form-control" %>
+						   	</div>
+							
+						</div>
+					</div>
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit "Save Changes" %>
+        			<% end %>
+      </div>
+    </div>
+  </div>
+</div>
 

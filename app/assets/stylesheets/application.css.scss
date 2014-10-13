@@ -63,6 +63,8 @@ body {
 	font-size: 11px;
 	padding: 2px;
 }
+
+
 // MARKETPLACE THUMBNAIL STYLING ON HOVER
 .selected_thumb {
 	background: #EEEEEE !important;
@@ -91,9 +93,6 @@ body {
 #email_box {
 	margin-left: 25px;
 }
-#lastname_box {
-	margin-left: 2px;
-}
 
 // ITEMS NEW
 #item_condition {
@@ -106,8 +105,17 @@ body {
 	width: 100%;
 }
 .input-group {
-	// width: 174px;
+	margin-top: 3px;
 	width: 100%;
+}
+.changeanchor a {
+	color: white !important;
+}
+button.btn.btn-primary.changeanchor {
+	margin-top: 2px;
+}
+.btn.btn-success {
+	margin-top: 2px;
 }
 
 // ITEMS PROFILE SHOW

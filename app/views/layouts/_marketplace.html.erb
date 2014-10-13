@@ -19,7 +19,7 @@
 												<h4 class="label label-info" id="item_label"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;USER</h4>
 												<li><%= i.user.firstname %></li>
 											</ul>
-									<p><%= link_to "See More >>", item_path(i.id),:class => "btn btn-default" %></p>
+									<p><%= link_to "See More", item_path(i.id),:class => "btn btn-default" %></p>
 						</div>		
 					</div>
 <!-- END OF BOOTSTRAP THUMB -->						
@@ -50,7 +50,7 @@
 					<h4 class="label label-info" id="item_label"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;USER</h4>
 					<li><%#= i.user.firstname %></li>
 				</ul>
-				<p><%= link_to "See More >>", item_path(i.id),:class => "btn btn-default" %></p>
+				<p><%= link_to "See More", item_path(i.id),:class => "btn btn-default" %></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
