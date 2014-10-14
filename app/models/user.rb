@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
   validates_format_of :firstname, :with => /[a-zA-Z]+/
   validates_format_of :lastname, :with => /[a-zA-Z]+/
 
-  validates_presence_of :firstname
-  validates_presence_of :lastname
+  # validates_presence_of :firstname
+  # validates_presence_of :lastname
   validates_presence_of :email
 
 end
