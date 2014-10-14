@@ -47,9 +47,15 @@
 					  </div>
 <!-- SWAP CONTENT SECTION -->
 					  <div class="tab-pane" id="swaps">
-					  	<h4 class="label label-info" id="item_label">BACK TO MARKETPLACE</h4><br>
+							<h4 class="label label-info" id="item_label">Swaps</h4><br>
+								<% @trades.each do |i|%>
+								<ul class="items_users_show">
+									<%= i.trader.firstname %> - <%= link_to "See More", trade_path(i)%>
+								</ul>
+								<% end %>
+
 					  	<button class="btn btn-primary changeanchor">
-					  		<%= link_to "Find Treasure", items_path %>
+					  		<%= link_to "Marketplace", items_path %>
 					  	</button>
 					  </div>
 					</div>

@@ -13,7 +13,7 @@ Swappaholics is a bartering platform. In the long long ago, people were able to 
 <h2>GETTING STARTED:</h2>
 Users can access Swappaholics by going to http://swappaholic.herokuapp.com/, creating an account, and then posting their first item to swap!
 
-<h2>DEVELOPER INFO:<h2>
+<h2>DEVELOPER INFO:</h2>
 <ul>
 	<li>Layout & Styling: HTML, CSS, jQuery, D3, Bootstrap</li>
 	<li>Framework & Functionality: Rails application, Ruby</li>

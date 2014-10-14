@@ -1,1 +1,22 @@
+<div class="container">
+	<h1>Pending & Executed Swaps!</h1>
 
+	<div id="marketplace_grid">
+		<div class="row">
+				<div class="col-md-4">
+					<ul id="item_marketplace">
+						<h4 class="label label-info" id="item_label">TRADER</h4>
+						<li><%= @trade.trader.firstname %></li>
+<!-- 						<h4 class="label label-info" id="item_label">TRADER ITEM</h4>
+						<li><%#= @trade.trader.item.name %></li> -->
+						<h4 class="label label-info" id="item_label">TRADEE</h4>
+						<li><%= @trade.tradee.firstname %></li>
+<!-- 						<h4 class="label label-info" id="item_label">TRADEE ITEM</h4>
+						<li><%#= @trade.tradee.item.name %></li> -->
+						<h4 class="label label-info" id="item_label">ACCEPTED?</h4>
+						<li><%= @trade.success %></li>
+
+
+
+
+</div>

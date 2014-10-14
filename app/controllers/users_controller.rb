@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
     @items = Item.all
+    @trades = Trade.all
   end  
 
   def edit

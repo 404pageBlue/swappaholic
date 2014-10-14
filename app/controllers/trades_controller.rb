@@ -16,7 +16,12 @@ class TradesController < ApplicationController
 			# doing nothing. display "pending trade"
 			
 		#end
+    redirect_to trade_path(@trade)
 	end
+
+  def show
+    @trade = Trade.find(params[:id])
+  end
 
   def exchange
 
