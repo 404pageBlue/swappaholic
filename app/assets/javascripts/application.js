@@ -20,6 +20,7 @@
 $(document).ready(function(){
 	$('.thumbnail').hover(function(){
 		$(this).toggleClass('selected_thumb');
+		$('.caption > a').toggleClass('selected_thumb_link');
 	});
 });
 
