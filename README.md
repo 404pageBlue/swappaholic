@@ -1,4 +1,3 @@
-== README
 <h1>Swappaholic.com</h1>
 
 <h2>OVERVIEW:</h2>
