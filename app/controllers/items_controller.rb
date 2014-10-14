@@ -23,12 +23,12 @@ class ItemsController < ApplicationController
   	redirect_to user_profile_path(current_user)
   end
 
-   def search
+  def search
     # "I" is for ignoring uppercase and lower case difference.
     # LIKE = looking for the stuff that is closest to the keyword
     # "%# contentgoeshere %" = prevents direct injection of the words typed in the search box into our database (postgreSQL specific)
     @results = Item.where("name ILIKE ?", "%#{params[:keyword]}%")
-end
+  end
 
   def edit
   	@item = Item.find(params[:id])
@@ -48,9 +48,6 @@ end
     @item.destroy
     redirect_to :back
   end
-
-end
-
 
 end
 
