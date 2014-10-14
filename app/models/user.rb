@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 	has_many :items
 
 	has_many :traders, class_name: "Trade", foreign_key: :trader_id, inverse_of: :tradee
-  	has_many :tradees, class_name: "Trade", foreign_key: :tradee_id, inverse_of: :trader
+  has_many :tradees, class_name: "Trade", foreign_key: :tradee_id, inverse_of: :trader
 
   # validates_format_of :firstname, :with => /[a-zA-Z]+/
   # validates_format_of :lastname, :with => /[a-zA-Z]+/

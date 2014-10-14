@@ -32,6 +32,8 @@
 							<% end %>
 <!-- HIDE OFFER TRADE LINK IF ITEM BELONGS TO CURRENT_USER -->
 						<% if current_user && current_user.items.exists?(id: @item.id) %>
+						
+						<% elsif !user_signed_in? %>
 
 						<% else %>
 
@@ -71,7 +73,7 @@
 						<%= @item.willing_to_trade_for %><br>
 						</div>
 
-
+					<% if current_user %>
 						<div>
 						<h2> Item you are offering </h2>
 						</div>
@@ -83,6 +85,7 @@
 						     <%= f.hidden_field :tradee_item_id, value: @item.id %>
 						      <%= f.submit "Request Trade" %>
 							<% end %>
+					<% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
