@@ -5,6 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :items
 
+def user_params
+  params.require(:user).permit(:firstname, :email, :lastname)
+end
+
+
 	has_many :traders, class_name: "Trade", foreign_key: :trader_id, inverse_of: :tradee
   	has_many :tradees, class_name: "Trade", foreign_key: :tradee_id, inverse_of: :trader
 
