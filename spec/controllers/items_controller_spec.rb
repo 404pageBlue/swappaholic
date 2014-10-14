@@ -15,6 +15,11 @@ describe ItemsController do
     expect(@item.class).to eq(Item)
   end
 
+  it "#new" do
+  get 'new'
+  expect(response).to have_http_status(:success)
+  end
+
   it '#create' do
     expect(@item).to eq(@item)
   end
@@ -22,9 +27,16 @@ describe ItemsController do
   it '#edit' do
     expect(@item).to eq(@item)
   end
-
+  
   it "#update" do
     expect(@item).to eq(@item)
+  end
+
+    describe "GET '#show'" do
+    it "should be successful" do
+      get 'index'
+      expect(response).to be_success
+    end
   end
 
   it "#destroy" do
