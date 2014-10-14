@@ -5,12 +5,12 @@ class TradesController < ApplicationController
   end
 
   def new
-  	@item = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def create
   	@trade = Trade.new(params.require(:trade).permit(:trader_id, :tradee_id, :trader_item_id, :tradee_item_id))
-		@trade.save 
+		@trade.save
 			#alert("your trade has been proposed")
 		#else
 			# doing nothing. display "pending trade"
@@ -19,7 +19,7 @@ class TradesController < ApplicationController
 	end
 
   def exchange
-    
+
     trader_item =  Trade.find(params[:trade][:trade_id]).trader_item
     tradee_item =  Trade.find(params[:trade][:trade_id]).tradee_item
 

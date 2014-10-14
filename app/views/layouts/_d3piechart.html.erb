@@ -32,18 +32,18 @@
 				"sortOrder": "value-desc",
 				"content": [
 					<% @items.each do |item| %>
-//  ""because javascript assume its a variable
+					//  ""because javascript assume its a variable
 					{  
-						"label": "<%= item.name %>",
-						"value": 264131,
+						"label": "<%= item.name%>",
+						"value": 1,
 						"color": "#2484c1"
 					},
+					<% end %>
 					{
-						"label": "<%= item.category%>",
-						"value": 218812,
+						"label": "Ruby",
+						"value": 2,
 						"color": "#f6ac09"
 					},
-					<% end %>
 					/* {
 						"label": "Java",
 						"value": 157618,
@@ -90,7 +90,7 @@
 				"pullOutSegmentOnClick": {
 					"effect": "linear",
 					"speed": 400,
-					"size": 8
+					"size": 20
 				}
 			},
 			"misc": {

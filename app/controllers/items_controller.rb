@@ -48,4 +48,9 @@ end
     @item.destroy
     redirect_to :back
   end
+<<<<<<< HEAD
 end
+=======
+
+end
+>>>>>>> 8472c7bcafd81ab064cbb02b1e76ae705717b42a
