@@ -24,8 +24,3 @@ $(document).ready(function(){
 	});
 });
 
-// INTERACTIVE MARKETPLACE SHOW 
-// $(document).ready(function(){
-
-// });
-
